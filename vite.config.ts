@@ -13,8 +13,7 @@ export default defineConfig({
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
       name: 'vite-boilerplate',
-      formats: ['es', 'umd', "cjs"],
-      fileName: (format) => `vite-boilerplate.${format}.js`,
+      fileName: `vite-boilerplate`,
     },
     rollupOptions: {
       external: ['vue'],

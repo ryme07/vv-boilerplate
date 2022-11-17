@@ -1,17 +1,15 @@
-import { App } from 'vue'
-import * as components from './components'
+import * as components from './components';
+import type { App, Component } from 'vue'
 
-function install(app: App) {
-    for (const key in components) {
-        // @ts-expect-error
-        app.component(key, components[key])
-    }
-}
 
-import './assets/main.scss'
-
-export default { install }
-
-export * from './components'
+const componentsList: Component = components?.default;
+const viteBoilerPlate = {
+    install(app: App) {
+        Object.keys(componentsList).forEach(name => {
+            app.component(name, componentsList[name]);
+        })
+    },
+};
+export default viteBoilerPlate;
 
 

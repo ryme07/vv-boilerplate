@@ -1,10 +1,10 @@
 {
   "name": "vite-boilerplate",
-  "version": "0.0.1",
-  "main": "dist/vite-boilerplate.common.js",
+  "version": "0.1.1",
+  "main": "dist/vite-boilerplate.umd.cjs",
+  "module": "dist/vite-boilerplate.js",
   "type": "module",
   "author": "Ryme",
-  "module": "dist/vite-boilerplate.umd.min.js",
   "description": "Vite boilerplate",
   "types": "./dist/index.d.ts",
   "files": [
@@ -12,7 +12,8 @@
   ],
   "exports": {
     ".": {
-      "import": "./dist/vite-boilerplate.es.js"
+      "import": "./dist/vite-boilerplate.js",
+      "require": "./dist/vite-boilerplate.umd.cjs"
     },
     "./dist/style.css": "./dist/style.css"
   },

@@ -1,6 +1,6 @@
 {
   "name": "vite-boilerplate",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "main": "dist/vite-boilerplate.umd.cjs",
   "module": "dist/vite-boilerplate.js",
   "type": "module",

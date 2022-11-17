@@ -12,9 +12,9 @@ export default defineConfig({
   build: {
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
-      name: 'libnov',
+      name: 'vite-boilerplate',
       formats: ['es', 'umd', "cjs"],
-      fileName: (format) => `libnov.${format}.js`,
+      fileName: (format) => `vite-boilerplate.${format}.js`,
     },
     rollupOptions: {
       external: ['vue'],

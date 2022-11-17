@@ -1,14 +1,17 @@
-import * as components from './components';
-import type { Component, App } from 'vue'
+import { App } from 'vue'
+import * as components from './components'
 
-const componentsList: Component | any = components?.default;
-const libnov = {
-    install(app: App) {
-        Object.keys(componentsList).forEach(name => {
-            app.component(name, componentsList[name]);
-        })
-    },
-};
+function install(app: App) {
+    for (const key in components) {
+        // @ts-expect-error
+        app.component(key, components[key])
+    }
+}
 
-export default { libnov }
+import './assets/main.scss'
+
+export default { install }
+
+export * from './components'
+
 
